@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <h2><a href="#">MyPortfolio</a></h2>
+      <nav>
+        <ul>
+          <li><a href="#about-me">About</a></li>
+          <li><a href="#project-section">Projects</a></li>
+          <li><a href="#contact-section">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" data-aos="fade-down">
+      <h1>Hello I'm Zaeem Raja</h1>
+      <p>A passionate software developer</p>
+      <a href="https://github.com/dashboard" class="hero-button"
+        >View My Work</a
+      >
+    </section>
+
+    <!-- About Me -->
+    <section id="about-me" class="about" data-aos="fade-up">
+      <h1>About Me</h1>
+      <p>
+        I'm a web developer with experience in creating modern and responsive
+        designs. I enjoy building web applications that provide a seamless user
+        experience.
+      </p>
+    </section>
+
+    <!-- Projects -->
+    <section id="project-section" class="projects">
+      <h1 data-aos="fade-up">My Projects</h1>
+      <div class="project-container">
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+          <h2>Expense Tracker in Flutter</h2>
+          <p>
+            This Flutter-based application helps users track their expenses,
+            manage budgets, and categorize spending.
+          </p>
+          <a
+            href="https://github.com/Zaeem2678/Flutter-Projects"
+            class="btn-github"
+            >View on GitHub</a
+          >
+        </div>
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="400">
+          <h2>Quiz Application in Flutter</h2>
+          <p>
+            A fun and interactive quiz app built using Flutter, featuring
+            multiple-choice questions and a score tracker.
+          </p>
+          <a
+            href="https://github.com/Zaeem2678/Flutter-Projects"
+            class="btn-github"
+            >View on GitHub</a
+          >
+        </div>
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="600">
+          <h2>News Website (HTML, CSS, JS)</h2>
+          <p>
+            This website aggregates and displays news articles using HTML, CSS,
+            and JavaScript, offering a simple and clean interface.
+          </p>
+          <a href="https://github.com/Zaeem2678/Web-Projects" class="btn-github"
+            >View on GitHub</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Header -->
+    <div id="contact-section" class="contact-header" data-aos="fade-up">
+      <h2>Contact Me</h2>
+    </div>
+
+    <!-- Contact Form -->
+    <section class="contact-form">
+      <form>
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Email" />
+        <textarea placeholder="Message" rows="6"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Scroll To Top Button -->
+    <button id="scrollTopBtn" onclick="scrollToTop()">↑ Top</button>
+
+    <!-- Footer -->
+    <footer>&copy; 2024 MyPortfolio. All rights reserved.</footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+      window.onscroll = () => {
+        if (
+          document.body.scrollTop > 300 ||
+          document.documentElement.scrollTop > 300
+        ) {
+          scrollTopBtn.style.display = "block";
+        } else {
+          scrollTopBtn.style.display = "none";
+        }
+      };
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+  </body>
+</html>
